@@ -248,6 +248,7 @@ public class MainActivity extends AppCompatActivity {
         playerPoint = 0;
         computerPoint = 0;
         draw = 0;
+        dontetlenText.setText("Döntetlen: 0");
         playerChoicePic.setImageResource(R.drawable.rock);
         computerChoicePic.setImageResource(R.drawable.rock);
         pointCounter.setText(String.format("Eredmény: Ember: %d Computer: %d",playerPoint,computerPoint));
