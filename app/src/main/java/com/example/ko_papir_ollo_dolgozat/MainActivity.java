@@ -58,14 +58,15 @@ public class MainActivity extends AppCompatActivity {
                 getCompPick();
                 playerChoiceNum = 1;
                 playerChoicePic.setImageResource(R.drawable.rock);
-                if(resultCheck() == 1)
+                int result = resultCheck();
+                if(result == 1)
                 {
 
                     playerPoint++;
                     pointCounter.setText(String.format("Eredmény: Ember: %d Computer: %d",playerPoint,computerPoint));
 
                 }
-                else if(resultCheck() == 3){
+                else if(result == 3){
                     draw++;
                     dontetlenText.setText(String.format("Döntetlen: %d", draw));
 
@@ -86,13 +87,14 @@ public class MainActivity extends AppCompatActivity {
                 getCompPick();
                 playerChoiceNum = 2;
                 playerChoicePic.setImageResource(R.drawable.paper);
-                if(resultCheck() == 1)
+                int result = resultCheck();
+                if(result == 1)
                 {
                     playerPoint++;
                     pointCounter.setText(String.format("Eredmény: Ember: %d Computer: %d",playerPoint,computerPoint));
 
                 }
-                else if(resultCheck() == 3){
+                else if(result == 3){
                    draw++;
                    dontetlenText.setText(String.format("Döntetlen: %d", draw));
                 }
@@ -113,13 +115,14 @@ public class MainActivity extends AppCompatActivity {
                 getCompPick();
                 playerChoiceNum = 3;
                 playerChoicePic.setImageResource(R.drawable.scissors);
-                if(resultCheck() == 1)
+                int result = resultCheck();
+                if(result == 1)
                 {
                     playerPoint++;
                     pointCounter.setText(String.format("Eredmény: Ember: %d Computer: %d",playerPoint,computerPoint));
 
                 }
-                else if(resultCheck() == 3){
+                else if(result == 3){
                    draw++;
                    dontetlenText.setText(String.format("Döntetlen: %d", draw));
                 }
@@ -154,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public int resultCheck()//Computer wins agains the player when player pick Rock and Computer pick scissors
+    public int resultCheck()
     {
 
 
